@@ -1,0 +1,29 @@
+.line {
+	border-bottom: 2px solid #00c3a7;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 295px;
+	margin-bottom: 1rem;
+}
+
+h1 {
+	margin-bottom: 0;
+}
+
+a {
+	color: #00c3a7;
+}
+
+body {
+	margin-top: 3rem;
+}
+
+footer {
+	margin-top: 10rem;
+}
+
+
+
+/*.module-selection section{
+	background-color: #f9f9f9;
+}*/

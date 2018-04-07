@@ -1,0 +1,177 @@
+
+header {
+	background-color: #00c3a7;
+
+}
+
+body {
+	
+}
+
+header a{
+	color: white;
+	font-weight: bold;
+	font-size: 1.4rem;
+}
+header a:hover{
+	color: white;
+}
+
+a {
+	color: #00c3a7;
+}
+
+.bg-turkis {
+	background-color: #00c3a7;
+}
+
+.heading-img {
+	background: url("../img/dna-helix.jpg") center no-repeat green;
+	background-size: 100%;
+	color: white;
+}
+
+.heading-bg {
+	background-color: #343a40;
+}
+
+section {
+	margin: 2rem 0;
+}
+
+.nav-pills .pill-main .nav-link:not(.active) {
+    color: black;
+    background-color: white;
+    font-size: large;
+    
+}
+
+.nav-pills .pill-main .nav-link {
+    background-color: orange;
+    color: black;
+    font-size: large;
+   
+}
+
+.vorlesungsverzeichnis h5 {
+	text-align: center;
+}
+
+.vorlesungsverzeichnis {
+	/*border-left: 1px solid #00c3a7;*/
+	border-top:  3px solid orange;
+	border-bottom: 3px solid orange;
+	/*border-radius: 1rem ;*/
+
+
+}
+
+.button-ge {
+	background-color: #00c3a7;
+	color: white;
+}
+.button-ge:hover {
+	background-color: #02e5c3;
+	color: white;
+}
+
+.button-orange {
+	background-color: orange;
+	color: white;
+}
+
+.button-orange:hover {
+	background-color: #ffbf20;
+}
+
+#ex1Slider .slider-selection {
+	background: #BABABA;
+}
+
+.card-title small {
+	color: grey;
+}
+
+#pills-tab a{
+	
+}
+
+.test {
+	padding: 10px;
+    box-shadow: 5px 5px 5px grey;
+}
+.test ol li {
+	/*padding-bottom: 20rem;*/
+	font-weight: bold;
+}
+
+.test ol ul li {
+	padding-bottom: 1rem;
+}
+
+.info-content {
+	padding:  2rem 0;
+	border-bottom: solid #999999 1px;
+}
+.material .card-footer{
+	border: none;
+	background-color: white;
+}
+
+.generator-body {
+
+}
+
+.generator-footer {
+	background-color: 
+}
+
+
+#studyrow {
+	background: url(../img/architecture-auditorium-building.jpg) center no-repeat;
+	padding: 1rem;
+	color: white;
+	min-height: 15rem;
+}
+
+.rowback{
+	background-color: #00c3a7;
+	padding: 0.5rem;
+}
+
+#loader-box, .test-uti{
+	display: none;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #00c3a7; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.folien-1 button{
+	margin: 0.5rem;
+}
+
+.mitschriften button {
+	margin: 0.5rem;
+}
+
+.schnellfragen li {
+	padding-left: 0.5rem;
+	padding-bottom: 1rem;
+
+}
+
+.schnellfragen span {
+	font-weight: normal;
+}
