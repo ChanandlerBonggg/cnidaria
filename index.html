@@ -11,8 +11,47 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
  	<title>Cnidaria</title>
+
+ 	
  </head>
  <body class="">
+ 	<!-- The Modal -->
+<div id="loginModal" class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header bg-turkis text-white">
+        <h4 class="modal-title font-weight-bold">Login</h4>
+        
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body m-3">
+      	<div class="cmxform" id="commentForm" method="get" action="">
+      		 <div class="form-group">
+		        <form class="row mb-3">
+			        <label for="cemail" class="col-sm-3 d-flex">Email</label>
+			        <input id="cemail" class="col-sm-7 form-control" type="email" name="email" placeholder="@tu-bs Email Addresse">
+		        </form>
+		        <form class="row">
+		        	<label class="col-sm-3 text-left">Passwort</label>
+		        	<input class="col-sm-7 form-control" type="password" name="pws" placeholder="dein Passwort">
+		        </form>
+		        
+	    	</div>
+		</div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer bg-light">
+        <input class="submit btn button-turkis " data-dismiss="modal" type="submit" value="Einloggen">
+      </div>
+
+    </div>
+  </div>
+</div>
+
  	
 
  	<main class="cover-container d-flex h-100 p-3 mx-auto flex-column">
@@ -219,7 +258,6 @@
 
 	 		</ul>
 	 	</nav>
-
 	 		
  	</footer>
 
@@ -229,7 +267,17 @@
 
  	<!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.validate.js"></script>
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+ 		
+    	console.log('load');
+ 		$(document).ready(function(){
+                $('#loginModal').modal('show');
+            });
+
+ 	</script>
+
  </body>
  </html>

@@ -29,3 +29,16 @@
 main ul a {
 	
 }
+
+.bg-turkis {
+	background-color: #00c3a7;
+}
+
+.button-turkis {
+	background-color: #00c3a7;
+	color: white;
+}
+.button-turkis:hover {
+	background-color: #02e5c3;
+	color: white;
+}
