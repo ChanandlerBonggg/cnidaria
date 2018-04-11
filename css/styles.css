@@ -42,3 +42,8 @@ main ul a {
 	background-color: #02e5c3;
 	color: white;
 }
+
+.input-error {
+	background-color: #f9e5e6;
+	border-color: red;
+}

@@ -35,10 +35,11 @@
 		        <div class="row mb-3">
 			        <label for="email" class="col-sm-3 d-flex">Email</label>
 			        <input id="email" class="col-sm-7 form-control" type="email" name="email" placeholder="@tu-bs Email Addresse">
+			        <div id="email-error" class="ml-auto mr-auto text-danger"></div>
 		        </div>
 		        <div class="row">
-		        	<label class="col-sm-3 text-left">Passwort</label>
-		        	<input class="col-sm-7 form-control" type="password" name="pws" placeholder="dein Passwort">
+		        	<label for="pws" class="col-sm-3 text-left">Passwort</label>
+		        	<input id="pws" class="col-sm-7 form-control" type="password" name="pws" placeholder="dein Passwort">
 		        </div>
 		        
 	    	</fieldset>
@@ -283,21 +284,33 @@
 
  	<script type="text/javascript">
  		function validateForm(){
-	      var loginValue = document.forms["login"]["email"].value;
+	      var emailValue = document.forms["login"]["email"].value;
+	      var pwsValue = document.forms["login"]["pws"].value;
 	      var regExEmail = /@tu-bs/;
-	      console.log(loginValue);
+	      console.log(emailValue);
 	      console.log("click");
-	      if ((loginValue.search(regExEmail) + 1)) {
+	      //Cheking if correct email is typed in
+	      if ((emailValue.search(regExEmail) + 1)) {
 	        console.log("submit");
 	        $('#loginModal').modal('hide');
 	        return true;
-	      } else if(loginValue == ""){
+	      } else if(emailValue == ""){
 	        console.log("empty email");
+	        document.getElementById('email').classList.add('input-error');
+	        document.getElementById('email-error').innerHTML="Enter tu-bs Email";
 	        return false;
 	      } else {
 	        console.log("wrong email");
+	        document.getElementById('email').classList.add('input-error');
+	        document.getElementById('email-error').innerHTML="Enter tu-bs Email";
 	        return false;
 	      }
+	      // Checking if an password was typed in
+	      if(pwsValue == ""){
+	      	document.getElementById('pws').classList.add('input-error');
+	      	return false;
+	      }
+
 	    }
  	</script>
 
