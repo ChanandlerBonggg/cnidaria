@@ -12,25 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
  	<title>Cnidaria</title>
 
- 	<script type="text/javascript">
- 		function validateForm(){
-	      var loginValue = document.forms["login"]["email"].value;
-	      var regExEmail = /@tu-bs/;
-	      console.log(loginValue);
-	      console.log("click");
-	      if ((loginValue.search(regExEmail) + 1)) {
-	        console.log("submit");
-	        $('#loginModal').modal('hide');
-	        return true;
-	      } else if(loginValue == ""){
-	        console.log("empty email");
-	        return false;
-	      } else {
-	        console.log("wrong email");
-	        return false;
-	      }
-	    }
- 	</script>
+ 	
 
  	
  </head>
@@ -297,6 +279,26 @@
                 $('#loginModal').modal('show');
             });
 
+ 	</script>
+
+ 	<script type="text/javascript">
+ 		function validateForm(){
+	      var loginValue = document.forms["login"]["email"].value;
+	      var regExEmail = /@tu-bs/;
+	      console.log(loginValue);
+	      console.log("click");
+	      if ((loginValue.search(regExEmail) + 1)) {
+	        console.log("submit");
+	        $('#loginModal').modal('hide');
+	        return true;
+	      } else if(loginValue == ""){
+	        console.log("empty email");
+	        return false;
+	      } else {
+	        console.log("wrong email");
+	        return false;
+	      }
+	    }
  	</script>
 
  </body>
