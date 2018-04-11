@@ -12,11 +12,31 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
  	<title>Cnidaria</title>
 
+ 	<script type="text/javascript">
+ 		function validateForm(){
+	      var loginValue = document.forms["login"]["email"].value;
+	      var regExEmail = /@tu-bs/;
+	      console.log(loginValue);
+	      console.log("click");
+	      if ((loginValue.search(regExEmail) + 1)) {
+	        console.log("submit");
+	        $('#loginModal').modal('hide');
+	        return true;
+	      } else if(loginValue == ""){
+	        console.log("empty email");
+	        return false;
+	      } else {
+	        console.log("wrong email");
+	        return false;
+	      }
+	    }
+ 	</script>
+
  	
  </head>
  <body class="">
  	<!-- The Modal -->
-<div id="loginModal" class="modal fade" id="myModal">
+<div id="loginModal" class="modal fade" id="myModal" data-backdrop="static">
   <div class="modal-dialog">
     <div class="modal-content">
 
@@ -28,24 +48,24 @@
 
       <!-- Modal body -->
       <div class="modal-body m-3">
-      	<div class="cmxform" id="commentForm" method="get" action="">
-      		 <div class="form-group">
-		        <form class="row mb-3">
-			        <label for="cemail" class="col-sm-3 d-flex">Email</label>
-			        <input id="cemail" class="col-sm-7 form-control" type="email" name="email" placeholder="@tu-bs Email Addresse">
-		        </form>
-		        <form class="row">
+      	<form id="login" name="login"  method="post" action="">
+      		 <fieldset class="form-group">
+		        <div class="row mb-3">
+			        <label for="email" class="col-sm-3 d-flex">Email</label>
+			        <input id="email" class="col-sm-7 form-control" type="email" name="email" placeholder="@tu-bs Email Addresse">
+		        </div>
+		        <div class="row">
 		        	<label class="col-sm-3 text-left">Passwort</label>
 		        	<input class="col-sm-7 form-control" type="password" name="pws" placeholder="dein Passwort">
-		        </form>
+		        </div>
 		        
-	    	</div>
-		</div>
+	    	</fieldset>
+		</form>
       </div>
 
       <!-- Modal footer -->
       <div class="modal-footer bg-light">
-        <input class="submit btn button-turkis " data-dismiss="modal" type="submit" value="Einloggen">
+        <input class="submit btn button-turkis" form="login"  type="" value="Einloggen" onclick="validateForm()">
       </div>
 
     </div>
@@ -267,7 +287,7 @@
 
  	<!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="jquery.validate.js"></script>
+    <!-- <script type="text/javascript" src="jquery.validate.js"></script> -->
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript">
