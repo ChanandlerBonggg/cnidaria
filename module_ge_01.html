@@ -235,54 +235,39 @@
                     <form class="generator container">
                         <div class="row mt-3">
                             <div class="col-sm-2"><label class="my-1 mr-2" for="inlineFormCustomSelectPref"><span class="">Klausurthemen</span> </label></div>
-                            <!-- <div class="col-sm-10">
-                                <div class="form-inline">
-                                  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                                    <option selected>Wähle...</option>
-                                    <option value="1">Alle Karteikarten</option>
-                                    <option value="2">Altklausuren</option>
-                                    <option value="3" class="menu-divider">Ohne Altklausuren</option>
-                                    <option value="4">Klassische Genetik</option>
-                                    <option value="5">Eukaryotische Chromosome</option>
-                                    <option value="5">Epigenetik</option>
-                                    <option value="5">Mutationen</option>
-                                    <option value="5"></option>
-                                  </select>
-                                </div>
-                            </div> -->
                             <div class="col-sm-10">
                                 <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                  <input class="form-check-input" type="checkbox" value="klassischeGenetik" id="defaultCheck1" name="topic">
                                   <label class="form-check-label" for="defaultCheck1">
                                     Klassische Genetik
                                   </label>
                                 </div>
                                 <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                  <input class="form-check-input" type="checkbox" value="eukaryotische-chromosome" id="defaultCheck2" name="topic">
                                   <label class="form-check-label" for="defaultCheck2">
                                     Eukaryotische Chromosome
                                   </label>
                                 </div>
                                 <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                  <input class="form-check-input" type="checkbox" value="epigenetik" id="defaultCheck2" name="topic">
                                   <label class="form-check-label" for="defaultCheck2">
                                     Epigenetik
                                   </label>
                                 </div>
                                 <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                  <input class="form-check-input" type="checkbox" value="mutationen" id="defaultCheck2" name="topic">
                                   <label class="form-check-label" for="defaultCheck2">
                                     Mutationen
                                   </label>
                                 </div>
                                 <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                  <input class="form-check-input" type="checkbox" value="entwicklungsgenetik" id="defaultCheck2" name="topic">
                                   <label class="form-check-label" for="defaultCheck2">
                                     Entwicklungsgenetik
                                   </label>
                                 </div>
                                 <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                                  <input class="form-check-input" type="checkbox" value="praktikumsversuche" id="defaultCheck2" name="topic">
                                   <label class="form-check-label" for="defaultCheck2">
                                     Praktikumsversuche
                                   </label>
@@ -302,19 +287,15 @@
                             </div>
                         </div> <!-- ENDE Zeit -->
                         <div class="row mt-3">
-                          
-                           
-                            
-                          
                         </div>
             </form>
                 </div>
                 <div class="card-footer generator-footer">
                         <div class="d-flex">
-                            <button type="submit" class="btn btn-warning mr-auto" id="generator-button">Klausur erstellen</button>
-                            <a href="../files/Klausur.pdf" download="GE01_Klausur" class=""><button type="button" class="btn btn-warning  test-uti">Download PDF</button></a>
-                        </div>
-                        
+                            <button type="submit" class="btn btn-warning mr-auto" id="generator-button" onclick="generateTest();">Klausur erstellen</button>
+                            <button type="button" class="btn btn-warning" id="test-answer-button" onclick="answerTest();">Antworten</button>
+                            <a href="files/Klausur.pdf" download="GE01_Klausur" class=""><button type="button" class="btn btn-warning  test-uti">Download PDF</button></a>
+                        </div> 
                 </div>
                 </div>
             </section>
@@ -328,7 +309,7 @@
                     <h2 class="pb-5 text-center">Klausur  <br>GE01 - Grundlagen der Genetik <br><small class="text-secondary">Klausurzeit: <span class="amount"></span></small></h2>
                     
                     <div class="container"> <!-- BEGINN des Blattes -->
-                        <ol>
+                        <ol id="test-fragen">
                             <li>Definiere folgende Begriffe: 
                                 <ul >
                                    <li>Gen</li>
@@ -360,7 +341,7 @@
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
      <script src="jquery-ui-dist/jquery-ui.min.js"></script>
-      <script>
+      <!-- <script>
   $( function() {
     $( "#slider" ).slider({
         min: 10,
@@ -377,6 +358,7 @@
         $('#loader-box').fadeIn(400).delay( 1500 ).fadeOut( 400 );
         $('.test-uti').delay(2300).fadeIn('fast');
   })
-  </script>
+  </script> -->
+   <script src="js/generator.js"></script>
 </body>
 </html>
