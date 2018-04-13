@@ -3,65 +3,129 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>jQuery UI Slider - Default functionality</title>
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
+
+  <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="jquery-ui-dist/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="css/module_ge_01.css">
   <link rel="stylesheet" type="text/css" href="css/test.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#slider" ).slider();
-  } );
-  </script>
-</head>
-<body class="m-5">
- 
- <div class="container">
-<div id="slider" class="mb-5"></div>
-
-<button class="btn btn-primary" id="loader-btn">Generate</button>
-<div id="loader-box" class="d-none">
- <div class="loader m-auto"></div> 
- <h3 class="text-center">Generating ...</h3>
-
- </div>
-  <p id="test" class="d-none">SOme cool shit!</p>
- </div>
+  <script type="text/javascript" src="js/fontawesome-all.min.js"></script>
 
 
-  <form name="login"  onsubmit="return validateForm()" method="post">
-Name: <input type="text" name="email">
-<input type="submit" value="Submit">
-</form> 
- 
- <script type="text/javascript">
-  $('#loader-btn').click(function(){
-    $('#loader-box').fadeIn("slow");
-    $('#loader-box').fadeOut("fast");
-    $('#test').fadeIn(3000);
-  }); 
+  </head>
+  <body>
 
 
+ <h1>Generator</h1>
 
-    function validateForm(){
-      var loginValue = document.forms["login"]["email"].value;
-      var regExEmail = /@tu-bs/;
-      console.log(loginValue);
-      console.log("click");
-      if ((loginValue.search(regExEmail) + 1)) {
-        console.log("submit");
-        return true;
-      } else if(loginValue == ""){
-        console.log("empty email");
-        return false;
-      } else {
-        console.log("wrong email");
-        return false;
-      }
-    }
-  
- </script>
+  <section class="container">
+                <div class="card" id="kl-gen">
+                <div class="card-header bg-turkis text-white"><h3>Klausur Generator</h3></div>
+                <div class="card-body generator-body">
+                    <form class="generator container">
+                        <div class="row mt-3">
+                            <div class="col-sm-2"><label class="my-1 mr-2" for="inlineFormCustomSelectPref"><span class="">Klausurthemen</span> </label></div>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="klassischeGenetik" id="defaultCheck1" name="topic">
+                                  <label class="form-check-label" for="defaultCheck1">
+                                    Klassische Genetik
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="eukaryotischeChromosome" id="defaultCheck2" name="topic">
+                                  <label class="form-check-label" for="defaultCheck2">
+                                    Eukaryotische Chromosome
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="epigenetik" id="defaultCheck2" name="topic">
+                                  <label class="form-check-label" for="defaultCheck2">
+                                    Epigenetik
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="utationen" id="defaultCheck2" name="topic">
+                                  <label class="form-check-label" for="defaultCheck2">
+                                    Mutationen
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="entwicklungsgenetik" id="defaultCheck2" name="topic">
+                                  <label class="form-check-label" for="defaultCheck2">
+                                    Entwicklungsgenetik
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="praktikumsversuche" id="defaultCheck2" name="topic">
+                                  <label class="form-check-label" for="defaultCheck2">
+                                    Praktikumsversuche
+                                  </label>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="row mt-3"> <!-- BEGINN Zeit -->
+                            <div class="col-md-2">
+                                Klausurdauer
+                            </div>
+                            <div class="col-md-5 container">
+                                <div id="slider" class="align-middle m-2"></div>
+                            </div>
+                            <div class="col-md-5">
+                                <!-- <label for="amount"></label> -->
+                                <input type="text" name="amount" id="amount">
+                            </div>
+                        </div> <!-- ENDE Zeit -->
+                        <div class="row mt-3">
+                        </div>
+            </form>
+                </div>
+                <div class="card-footer generator-footer">
+                        <div class="d-flex">
+                            <button type="submit" class="btn btn-warning mr-auto" id="generator-button" onclick="generateTest();">Klausur erstellen</button>
+                            <button type="button" class="btn btn-warning" id="test-answer-button" onclick="answerTest();">Antworten</button>
+                            <a href="files/Klausur.pdf" download="GE01_Klausur" class=""><button type="button" class="btn btn-warning  test-uti">Download PDF</button></a>
+                        </div> 
+                </div>
+                </div>
+            </section>
+            
+            <section class="container">
+              <div id="loader-box" class="">
+                <div class="loader m-auto"></div> 
+                <h3 class="text-center">Generating ...</h3>
+              </div>
+                <div class="test border m-3  test-uti">
+                    <h2 class="pb-5 text-center">Klausur  <br>GE01 - Grundlagen der Genetik <br><small class="text-secondary">Klausurzeit: <span class="amount"></span></small></h2>
+                    
+                    <div class="container"> <!-- BEGINN des Blattes -->
+                        <ol id="test-fragen">
+                            <li>Definiere folgende Begriffe: 
+                                <ul >
+                                   <li>Gen</li>
+                                   <li>Deletion</li> 
+                                   <li>Genom</li>
+                                   <li>Hemizygot</li>
+                                   <li>Rezessiv</li>
+                                   <li>Autosom</li>
+                                </ul>
+                            </li>
+                            
+                            <li>Erklären Sie das Prinzip einer Haplotyp-Analyse.</li>
+                            <li>Nennen Sie die Mendelschen Regeln.</li>
+                            <li>Erläutern Sie, warum Mutationen in kleinen Populationen oft eine größere Wirkung entfalten als in großen Populationen.</li>
+                            <li>Nennen Sie den möglichen cancerogenen Mechanismus bei Ethidiumbromid.</li>
+                            <li>Nennen Sie die wichtigsten Bestandteile eines eukaryotischen Promotors.</li>
+                        </ol>
+                    </div> <!--  ENDE des Blattes -->
+                </div>
+
+            </section>
+
+  <script src="jquery/dist/jquery.min.js"></script>
+  <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="jquery-ui-dist/jquery-ui.min.js"></script>
+  <script src="js/generator.js"></script>
 
 </body>
 </html>

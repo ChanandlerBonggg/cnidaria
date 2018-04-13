@@ -98,10 +98,10 @@ section {
 	padding: 10px;
     box-shadow: 5px 5px 5px grey;
 }
-.test ol li {
-	/*padding-bottom: 20rem;*/
+/*.test ol li {
+	padding-bottom: 20rem;
 	font-weight: bold;
-}
+}*/
 
 .test ol ul li {
 	padding-bottom: 1rem;
@@ -173,3 +173,7 @@ section {
 .schnellfragen span {
 	font-weight: normal;
 }
+
+/*.card-body {
+	border-top: orange solid 3px;
+}*/
