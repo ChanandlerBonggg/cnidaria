@@ -51,23 +51,42 @@ var epigenetikAntworten = [
 
   
   function generateTest() {
+  	var eukaryotischeChromosomeCheckbox = document.querySelector('input[value="eukaryotische-chromosome"]');
+  	var epigenetikCheckbox = document.querySelector('input[value="epigenetik"]');
   	var testInhalt = "";
-  	eukaryotischeChromosomeFragen.forEach(function(frage){
-  		testInhalt += "<li>" + "<h5>" + frage + "</h5>" + "</li>";
-  		document.getElementById("test-fragen").innerHTML = testInhalt;
-  	});
-  }
-
-  function answerTest() {
-  	var testInhalt = "";
-
-  	for(var i = 0; i < eukaryotischeChromosomeFragen.length -1; i++){
-  		testInhalt += "<li>" + "<h5>" + eukaryotischeChromosomeFragen[i] + "</h5>" + "<p>" + eukaryotischeChromosomeAntworten[i] + "</p>" + "</li>";
+  	if(eukaryotischeChromosomeCheckbox.checked) {
+  		for(var i = 0; i < eukaryotischeChromosomeFragen.length -1; i++){
+  			testInhalt += "<li>" + "<h5>" + eukaryotischeChromosomeFragen[i] + "</h5>" + "</li>";
+  		}
+  	}
+  	if(epigenetikCheckbox.checked) {
+  		for(var i = 0; i < epigenetikFragen.length -1; i++){
+  			testInhalt += "<li>" + "<h5>" + epigenetikFragen[i] + "</h5>" + "</li>";
+  		}
   	}
   	document.getElementById("test-fragen").innerHTML = testInhalt;
 
-  	// 	klassischeGenetikFragen.forEach(function(frage){
-  	// 	testInhalt += "<li>" + frage + "</li>";
+
+  	// var testInhalt = "";
+  	// eukaryotischeChromosomeFragen.forEach(function(frage){
+  	// 	testInhalt += "<li>" + "<h5>" + frage + "</h5>" + "</li>";
   	// 	document.getElementById("test-fragen").innerHTML = testInhalt;
   	// });
+  }
+
+  function answerTest() {
+  	var eukaryotischeChromosomeCheckbox = document.querySelector('input[value="eukaryotische-chromosome"]');
+  	var epigenetikCheckbox = document.querySelector('input[value="epigenetik"]');
+  	var testInhalt = "";
+  	if(eukaryotischeChromosomeCheckbox.checked) {
+  		for(var i = 0; i < eukaryotischeChromosomeFragen.length -1; i++){
+  			testInhalt += "<li>" + "<h5>" + eukaryotischeChromosomeFragen[i] + "</h5>" + "<p>" + eukaryotischeChromosomeAntworten[i] + "</p>" + "</li>";
+  		}
+  	}
+  	if(epigenetikCheckbox.checked) {
+  		for(var i = 0; i < epigenetikFragen.length -1; i++){
+  			testInhalt += "<li>" + "<h5>" + epigenetikFragen[i] + "</h5>" + "<p>" + epigenetikAntworten[i] + "</p>" + "</li>";
+  		}
+  	}
+  	document.getElementById("test-fragen").innerHTML = testInhalt;
   }
