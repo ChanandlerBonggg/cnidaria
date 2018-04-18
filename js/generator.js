@@ -144,6 +144,7 @@ var klassischeGenetikAntworten = [
   	var entwicklungsgenetikCheckbox = document.querySelector('input[value="entwicklungsgenetik"]');
   	var testInhalt = "";
   	if(eukaryotischeChromosomeCheckbox.checked) {
+  		if(eukaryotischeChromosomeFragen.length != eukaryotischeChromosomeAntworten.length) throw "Achtung: Es gibt zu wenige Antworten zu eukaryotische Chromosome!"
   		for(var i = 0; i < eukaryotischeChromosomeFragen.length -1; i++){
   			testInhalt += "<li>" + "<h5>" + eukaryotischeChromosomeFragen[i] + "</h5>" + "<p>" + eukaryotischeChromosomeAntworten[i] + "</p>" + "</li>";
   		}
