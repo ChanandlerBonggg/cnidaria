@@ -47,3 +47,7 @@ main ul a {
 	background-color: #f9e5e6;
 	border-color: red;
 }
+
+textarea#forum-input {
+	min-height: 10rem;
+}
