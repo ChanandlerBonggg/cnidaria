@@ -1,7 +1,9 @@
 
+
 $( function() {
 	// Zeit Slider
     $( "#slider" ).slider({
+    	value: 10,
         min: 10,
         max: 180,
               slide: function( event, ui ) {
