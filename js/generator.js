@@ -20,20 +20,30 @@ $( function() {
   })
 
 var eukaryotischeChromosomeFragen = [
+	"Unterscheiden Sie Chromosomen, Chromatiden und DNA-Doppelstrang."
+	,"Erläutern Sie die Funktion und Bedeutung der Telomerase."
+	,"Worin besteht die Bedeutung der Meiose im Vergleich zur Mitose?"
+	,"Was sind Riesenchromosomen?"
+	,"Warum wird das menschliche Y-Chromosom nicht aussterben?"
+];
+
+var eukaryotischeChromosomeAntworten = [
+	"Ein Chromosom in der Interphase besteht aus einer Chromatide, die aus einem DNA-Doppelstrang mit den dazugehörigen Proteinen (Histonen) aufgebaut ist. In der Metaphase der Mitose wurde die DNA bereits repliziert, und so erscheint das klassische Bild mit zwei Chromatiden, die am Centromer zusammenhängen."
+	,"Die Telomerase ist eine Reverse Transkriptase, die am Telomer zunächst kurze RNA-Moleküle (Pentamere, Hexamere oder Heptamere) anfügt und daran den Gegenstrang synthetisiert. Die Telomerase verhindert somit, dass die Enden der Chromosomen bei jeder Zellteilung verkürzt werden; sie ist in Einzellern aktiv sowie in höheren Eukaryoten in den Zellen der Keimbahn, in (embryonalen und adulten) Stammzellen, in Zellen des Immunsystems und in Krebszellen."
+	,"Die Mitose verteilt die verdoppelten Chromosomen bei einer regulären Zellteilung die Zellen befinden sich danach wieder im diploiden Zustand. Bei der Differenzierung der Keimzellen erfolgt in den beiden meiotischen Teilungen eine Reduktion auf eine haploide Keimzelle, sodass erst bei der Befruchtung erneut eine diploide Zelle entsteht. Die erste meiotische Teilung dient der Trennung der Chromosomen und die zweite der Trennung der Chromatiden. In der ersten meiotischen Teilung erfolgt außerdem ein Austausch von DNA-Fragmenten (Rekombination) zwischen den homologen (ursprünglich väterlichen und mütterlichen) Chromatiden, sodass die entstehenden Keimzellen eine individuelle Allelkombination enthalten. Zusammen erhöhen beide Mechanismen (Meiose und Rekombination) die genetische Vielfalt erheblich."
+	,"Riesenchromosomen (in den Speicheldrüsen vieler Insekten) bestehen aus einer großen Anzahl exakt gepaarter Chromatiden, die durch wiederholte Replikation der chromosomalen DNA ohne darauffolgende Zell- und Kernteilungen entstehen (Endoreplikation). Die Riesenchromosomen weisen eine hohe Transkriptionsaktivität auf; die Expression der Gene auf diesen Chromosomen wird durch den hohen Polytäniegrad deutlich erhöht. Die große Zahl der gepaarten Chromatiden ermöglicht außerdem die Beobachtung von strukturellen Unterschieden in den Chromosomen ohne weitere Färbetechniken."
+	,"Das menschliche Y-Chromosom ist gegenüber dem X-Chromosom degeneriert und enthält im Wesentlichen nur noch Gene, die für die Ausprägung des männlichen Phänotyps und für die männliche Fertilität wichtig sind. Allerdings enthält das Y-Chromosom viele Palindrome und repetitive Elemente, die häufige intrachromosomale Rekombinationen ermöglichen. Dadurch erscheint das Y-Chromosom durchaus als ein dynamisches Chromosom."
+];
+
+var melokulareStruktureukaryotischerGeneFragen = [
 	"Erläutern Sie die besonders hohe Stabilität des Fibroinmoleküls anhand der molekularen Struktur des Fibroin-Gens.",
 	"Erläutern Sie die Besonderheiten des Titin-Gens.",
 	"Zeigen Sie am Beispiel der Globin-Gene den Vorteil der vergleichenden DNA-Sequenzanalyse für evolutionäre Zusammenhänge.",
 	"Nennen Sie die wichtigsten Bestandteile eines eukaryotischen Promotors.",
 	"Beschreiben Sie den Mechanismus des »Glucose-Fühlers« (glucose sensing) für die Regulation der Insulin-Genexpression."
 ];
+// melokulareStruktureukaryotischerGeneAntworten fehlen! //
 
-var eukaryotischeChromosomeAntworten = [
-	"Ein Chromosom in der Interphase besteht aus einer Chromatide, die aus einem DNA-Doppelstrang mit den dazugehörigen Proteinen (Histonen) aufgebaut ist. In der Metaphase der Mitose wurde die DNA bereits repliziert, und so erscheint das klassische Bild mit zwei Chromatiden, die am Centromer zusammenhängen.",
-	"Die Telomerase ist eine Reverse Transkriptase, die am Telomer zunächst kurze RNA-Moleküle (Pentamere, Hexamere oder Heptamere) anfügt und daran den Gegenstrang synthetisiert. Die Telomerase verhindert somit, dass die Enden der Chromosomen bei jeder Zellteilung verkürzt werden; sie ist in Einzellern aktiv sowie in höheren Eukaryoten in den Zellen der Keimbahn, in (embryonalen und adulten) Stammzellen, in Zellen des Immunsystems und in Krebszellen.",
-	"Die Mitose verteilt die verdoppelten Chromosomen bei einer regulären Zellteilung einfach auf die jeweiligen Tochterzellen; die Zellen befinden sich danach wieder im diploiden Zustand. Bei der Differenzierung der Keimzellen erfolgt in den beiden meiotischen Teilungen eine Reduktion auf eine haploide Keimzelle, sodass erst bei der Befruchtung erneut eine diploide Zelle entsteht. Die erste meiotische Teilung dient der Trennung der Chromosomen und die zweite der Trennung der Chromatiden. In der ersten meiotischen Teilung erfolgt außerdem ein Austausch von DNA-Fragmenten (Rekombination) zwischen den homologen (ursprünglich väterlichen und mütterlichen) Chromatiden, sodass die entstehenden Keimzellen eine individuelle Allelkombination enthalten. Zusammen erhöhen beide Mechanismen (Meiose und Rekombination) die genetische Vielfalt erheblich.",
-	"Riesenchromosomen (in den Speicheldrüsen vieler Insekten) bestehen aus einer großen Anzahl exakt gepaarter Chromatiden, die durch wiederholte Replikation der chromosomalen DNA ohne darauffolgende Zell- und Kernteilungen entstehen (Endoreplikation). Die Riesenchromosomen weisen eine hohe Transkriptionsaktivität auf; die Expression der Gene auf diesen Chromosomen wird durch den hohen Polytäniegrad deutlich erhöht. Die große Zahl der gepaarten Chromatiden ermöglicht außerdem die Beobachtung von strukturellen Unterschieden in den Chromosomen ohne weitere Färbetechniken.",
-	"Das menschliche Y-Chromosom ist gegenüber dem X-Chromosom degeneriert und enthält im Wesentlichen nur noch Gene, die für die Ausprägung des männlichen Phänotyps und für die männliche Fertilität wichtig sind. Allerdings enthält das Y-Chromosom viele Palindrome und repetitive Elemente, die häufige intrachromosomale Rekombinationen ermöglichen. Dadurch erscheint das Y-Chromosom durchaus als ein dynamisches Chromosom."
-];
 
 var epigenetikFragen = [
 	"Was verstehen wir heute unter Epigenetik?",
