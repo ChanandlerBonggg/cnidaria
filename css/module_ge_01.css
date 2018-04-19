@@ -24,7 +24,7 @@ a {
 
 
 .heading-img {
-	background: url("../img/dna-helix.jpg") center no-repeat green;
+	background: url("../img/dna-helix.jpg") center no-repeat;
 	background-size: 100%;
 	color: white;
 }
