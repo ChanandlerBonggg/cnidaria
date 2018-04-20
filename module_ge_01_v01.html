@@ -290,11 +290,11 @@
                                 Klausurdauer
                             </div>
                             <div class="col-md-5 container">
-                                <div id="slider" class="align-middle m-2"></div>
+                                <input type="range" id="time-slider" class="align-middle m-2 slider" min="10" max="300">
                             </div>
                             <div class="col-md-5">
                                 <!-- <label for="amount"></label> -->
-                                <input type="text" name="amount" id="amount">
+                                <input type="number" name="amount" id="time">
                             </div>
                         </div> <!-- ENDE Zeit -->
                         <div class="row mt-3">
@@ -303,7 +303,7 @@
                 </div>
                 <div class="card-footer generator-footer">
                         <div class="">
-                            <button type="submit" class="btn btn-warning m-2" id="generator-button" onclick="generateTest();">Klausur erstellen</button>
+                            <button type="submit" class="btn btn-warning m-2" id="generator-button" onclick="createTest();">Klausur erstellen</button>
                             <button type="button" class="btn btn-warning test-uti m-2" id="test-answer-button" onclick="answerTest();">Antworten</button>
                             <a href="files/Klausur.pdf" download="GE01_Klausur" class="m-2"><button type="button" class="btn btn-warning  test-uti">Download PDF</button></a>
                         </div> 
@@ -321,22 +321,6 @@
                     
                     <div class="container"> <!-- BEGINN des Blattes -->
                         <ol id="test-fragen">
-                            <li>Definiere folgende Begriffe: 
-                                <ul >
-                                   <li>Gen</li>
-                                   <li>Deletion</li> 
-                                   <li>Genom</li>
-                                   <li>Hemizygot</li>
-                                   <li>Rezessiv</li>
-                                   <li>Autosom</li>
-                                </ul>
-                            </li>
-                            
-                            <li>Erklären Sie das Prinzip einer Haplotyp-Analyse.</li>
-                            <li>Nennen Sie die Mendelschen Regeln.</li>
-                            <li>Erläutern Sie, warum Mutationen in kleinen Populationen oft eine größere Wirkung entfalten als in großen Populationen.</li>
-                            <li>Nennen Sie den möglichen cancerogenen Mechanismus bei Ethidiumbromid.</li>
-                            <li>Nennen Sie die wichtigsten Bestandteile eines eukaryotischen Promotors.</li>
                         </ol>
                     </div> <!--  ENDE des Blattes -->
                 </div>
@@ -370,6 +354,7 @@
         $('.test-uti').delay(2300).fadeIn('fast');
   })
   </script> -->
-   <script src="js/generator.js"></script>
+   <script src="js/generator2.js"></script>
+   <!-- <script src="js/questions.js"></script> -->
 </body>
 </html>

@@ -1,4 +1,20 @@
+let slider = document.getElementById("time-slider");
+     	let sliderOutput = document.getElementById("time");
+     	sliderOutput.value = slider.value;
 
+     	slider.oninput = function() {
+		    sliderOutput.value = this.value;
+		    (document.getElementsByClassName("amount"))[0].innerHTML = sliderOutput.value;
+		} 
+
+		  $("#generator-button").click(function(){
+		        // Animation für das erscheinen des Loaders und danach der Klausur
+		        $('#loader-box').fadeIn(400).delay( 1500 ).fadeOut( 400 );
+		        $('.test-uti').delay(2300).fadeIn('fast');
+		  })
+
+
+// Creating Database
 function Card(id, front, back, time, topic){
 	this.id = id;
 	this.front = front;
@@ -37,10 +53,18 @@ let cards = [
 		"Warum wird das menschliche Y-Chromosom nicht aussterben?",
 		"Das menschliche Y-Chromosom ist gegenüber dem X-Chromosom degeneriert und enthält im Wesentlichen nur noch Gene, die für die Ausprägung des männlichen Phänotyps und für die männliche Fertilität wichtig sind. Allerdings enthält das Y-Chromosom viele Palindrome und repetitive Elemente, die häufige intrachromosomale Rekombinationen ermöglichen. Dadurch erscheint das Y-Chromosom durchaus als ein dynamisches Chromosom.",
 		8,
-		"eukaryotischeChromosome")
+		"eukaryotischeChromosome"),
+	new Card(
+		5,
+		"Was verstehen wir heute unter Epigenetik?",
+		"Epigenetik bezeichnet stabile Veränderungen in der Regulation der Genexpression, die während der Entwicklung, Zelldifferenzierung und Zellproliferation entstehen und über Zellteilungen hinweg festgeschrieben und aufrechterhalten werden, ohne dass dabei die DNA-Sequenz verändert wird. Epigenetische Markierungen sind Methylierung der DNA sowie Methylierung, Acetylierung und Phosphorylierung der Histone. Außerdem zählen wir die Wirkung verschiedener nicht-codierender RNA-Moleküle dazu.",
+		12,
+		"epigenetik")
 ];
 
 /// Shuffle function ////
+"use strict";
+
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -64,22 +88,42 @@ let questions;
 let answers;
 
 
-
-
-function chooseTopic(topic){
-	
-	let selectedCards = [];
+function chooseTopics(topicsArray){
+	// All cards get selected which contain a topic in the parameter array
+	// The selected cards get radnomly shuffled
+	// The function returns an array of cards
+	selectedTopicsCards = [];
 	for(let i=0; i < cards.length; i++){
-		if(cards[i].topic == topic){
-			selectedCards.push(cards[i]);
+		for(let j=0; j < topicsArray.length; j++){
+
+			if(cards[i].topic == topicsArray[j]){
+				selectedTopicsCards.push(cards[i]);
+			}
 		}
 	}
-	shuffle(selectedCards);
-	
-	return selectedCards;
+	shuffle(selectedTopicsCards);
+
+	return selectedTopicsCards;
 }
 
+// function chooseTopic(topic){
+// 	// All cards get searched for a defined topic 
+// 	// The selected cards get radnomly shuffled
+// 	// The function returns an array of randomly selected cards
+// 	let selectedCards = [];
+// 	for(let i=0; i < cards.length; i++){
+// 		if(cards[i].topic == topic){
+// 			selectedCards.push(cards[i]);
+// 		}
+// 	}
+// 	shuffle(selectedCards);
+	
+// 	return selectedCards;
+// }
+
 function chooseTime(cardDeck, time){
+	// cardDeck == array, time in min == number
+	// returns an array of cards, which sum doesn't exceed the time limit
 	let timeSelectedCards = [];
 
 	for(let i=0; i < cardDeck.length; i++){
@@ -91,23 +135,68 @@ function chooseTime(cardDeck, time){
 	return timeSelectedCards;
 }
 
-function createTest(topic,time){
-	if(typeof topic === "string" && typeof time === "number" ){
+function showTest(){
+
+	// use createTest before
+	// creates a list
+	// list items are questions
+	let testInhalt = "";
+	for(let i=0; i < questions.length; i++){
+		testInhalt += "<li>" + "<h5>" + questions[i] + "</h5>" + "</li>";
+	}
+	document.getElementById("test-fragen").innerHTML = testInhalt;
+}
+
+function createTest(){
+	let topics = [];
+	// Fills questions and anwers arrays with cards
+	// cards are selected by topic and their sum of time (duration to answer a card) can't exceed the time parameter
+	let eukaryotischeChromosomeCheckbox = document.querySelector('input[value="eukaryotische-chromosome"]');
+  	let epigenetikCheckbox = document.querySelector('input[value="epigenetik"]');
+  	let klassischeGenetikCheckbox = document.querySelector('input[value="klassischeGenetik"]');
+  	let mutationenCheckbox = document.querySelector('input[value="mutationen"]');
+  	let entwicklungsgenetikCheckbox = document.querySelector('input[value="entwicklungsgenetik"]');
+  	let testInhalt = "";
+
+  	if (eukaryotischeChromosomeCheckbox.checked) {
+  		topics.push("eukaryotischeChromosome");
+  	}
+  	if (epigenetikCheckbox.checked) {
+  		topics.push("epigenetik");
+  	}
+  	if (klassischeGenetikCheckbox.checked) {
+  		topics.push("klassischeGenetik");
+  	}
+  	if (mutationenCheckbox.checked) {
+  		topics.push("mutationen");
+  	}
+  	if (entwicklungsgenetikCheckbox.checked) {
+  		topics.push("entwicklungsgenetik");
+  	}
+
+
+
+	let time = sliderOutput.value;
+	time = parseInt(time);
+	if(typeof topics[0] === "string" && typeof time === "number" ){
 		questions = [];
 		answers = [];
 
-		testCards = chooseTime(chooseTopic(topic),time);
+		testCards = chooseTime(chooseTopics(topics),time);
 		for(let i=0; i < testCards.length; i++){
 			questions.push(testCards[i].front);
 			answers.push(testCards[i].back);
 		}
 		if(questions.length < 1) throw "Keine Karten";
-	}
+
+		showTest();
+
+	} else throw "Eingabe nicht korrekt";
 }
 
-function showTest(){
-	for(let i=0; i < questions.length; i++){
-		console.log(questions[i]);
-		console.log(answers[i]);
-	}
-}
+
+
+	
+	
+
+	
