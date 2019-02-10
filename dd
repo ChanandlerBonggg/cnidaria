@@ -1,0 +1,95 @@
+[33mcommit 1d91b5ce36bfc8872f61aa1a9ef263eb9f130f20[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Martin Zembaty <m.zembaty@yahoo.de>
+Date:   Fri Apr 20 17:05:09 2018 +0200
+
+    generator with random questions, only Eukaryotische Chromosome
+
+[33mcommit 5e3595281bf5e9efbf9747e9b6413104defdb19e[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Martin Zembaty <m.zembaty@yahoo.de>
+Date:   Thu Apr 19 09:08:58 2018 +0200
+
+    fixed broken links
+
+[33mcommit 94f1d55e2abf9f197f9d9a64661d7e5a3ba3fcee[m
+Author: Martin Zembaty <m.zembaty@yahoo.de>
+Date:   Thu Apr 19 08:36:59 2018 +0200
+
+    Title of Zukunft changed
+
+[33mcommit 1b6ad28d1c2072643d29f75da6fd40c7e5020c18[m
+Author: Martin Zembaty <m.zembaty@yahoo.de>
+Date:   Wed Apr 18 23:30:14 2018 +0200
+
+    Zukunftsvision hinzugefügt
+
+[33mcommit c71fe6576803358ad6e2ec4f8733752a8f18a27f[m
+Author: Martin Zembaty <m.zembaty@yahoo.de>
+Date:   Wed Apr 18 16:00:45 2018 +0200
+
+    downloads avaliable for karteikarten
+
+[33mcommit cedc1e06205e7fe141b264b224cf54151d8492e9[m
+Author: Martin Zembaty <m.zembaty@yahoo.de>
+Date:   Wed Apr 18 14:47:02 2018 +0200
+
+    Forum fertig
+
+[33mcommit 949957e328afb02e442a15b6355ba3fd65f5d42a[m
+Author: Martin Zembaty <m.zembaty@yahoo.de>
+Date:   Wed Apr 18 12:45:42 2018 +0200
+
+    minor changes to generator
+
+[33mcommit 9800a29b1ec214cda841e5d20b5e88f484c4c6d4[m
+Author: Martin Zembaty <m.zembaty@yahoo.de>
+Date:   Fri Apr 13 19:12:30 2018 +0200
+
+    generator with answers
+
+[33mcommit e567b1d76044eef406c0b883dc905036516d5d1c[m
+Author: Martin Zembaty <m.zembaty@yahoo.de>
+Date:   Fri Apr 13 17:51:01 2018 +0200
+
+    in test klausurgenerator mit Themenauswahl
+
+[33mcommit af461e7a07012cc345ca45acdc7423112bb629ab[m
+Author: Martin Zembaty <m.zembaty@yahoo.de>
+Date:   Fri Apr 13 17:26:01 2018 +0200
+
+    in test klausurgenerator mit antworten
+
+[33mcommit 4d914336ec4cb2aecbb8a5b59e1afba3589bab8f[m
+Author: Martin Zembaty <m.zembaty@yahoo.de>
+Date:   Wed Apr 11 11:12:47 2018 +0200
+
+    Studentenvortraege
+
+[33mcommit 239a605861af143bab26c02166e9360b857dfca0[m
+Author: Martin Zembaty <m.zembaty@yahoo.de>
+Date:   Wed Apr 11 10:17:24 2018 +0200
+
+    login error massages
+
+[33mcommit da052296ff4db3f347e25797ae5b28742c9af823[m[33m ([m[1;31morigin/gh-pages[m[33m)[m
+Author: Martin Zembaty <m.zembaty@yahoo.de>
+Date:   Wed Apr 11 09:28:32 2018 +0200
+
+    script issue index
+
+[33mcommit 1e245a168170befdbd2f64999afdc87c9e9ac66f[m
+Author: Martin Zembaty <m.zembaty@yahoo.de>
+Date:   Wed Apr 11 09:20:11 2018 +0200
+
+    login front-end authentication with js
+
+[33mcommit 4848c8930752f21b3dc3659894c67c510ea241d4[m[33m ([m[1;32mgh-pages[m[33m)[m
+Author: Martin Zembaty <m.zembaty@yahoo.de>
+Date:   Tue Apr 10 00:00:53 2018 +0200
+
+    login modal
+
+[33mcommit 4b88c07a9c016c9d378dfbfa5da7ea6c264c8f73[m
+Author: Martin Zembaty <m.zembaty@yahoo.de>
+Date:   Sat Apr 7 14:31:13 2018 +0200
+
+    init

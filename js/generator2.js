@@ -9,6 +9,7 @@ let slider = document.getElementById("time-slider");
 
 		  $("#generator-button").click(function(){
 		        // Animation für das erscheinen des Loaders und danach der Klausur
+		        $('.test-uti').hide();
 		        $('#loader-box').fadeIn(400).delay( 1500 ).fadeOut( 400 );
 		        $('.test-uti').delay(2300).fadeIn('fast');
 		  })
